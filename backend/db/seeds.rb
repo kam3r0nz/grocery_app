@@ -1,7 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+product1 = Product.create(name: "Yoplait Original Strawberry Yogurt - 6oz", price: 0.69, image: "https://www.yoplait.com/wp-content/uploads/2019/09/Yoplait-Original-Strawberry-Yogurt-460x460.png")
+product2 = Product.create(name: "Great Value Cheese, Finely Shredded, Fiesta Blend - 8 oz", price: 2.20, image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTXxalqGi7C2P0kPddejOgwyaAk1Z2Hprxx59SS5oIQCBL-xmLWM5m7nHkhxq9rzpSlSDfzWyy-7dVLNBD56Oj6TSFdiwf94RgLrgficnmnNUS9PHe6e5QMQI4wlWI&usqp=CAE")
+product3 = Product.create(name: "Frutero Passion Fruit Ice Cream Cup - 8oz", price: 4.99, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSOn7fa5XhqE-h3zJMskDgzxOiVj9iknRdTiH4Dje_PCfLVae3-dFAHVC0vN6rLnwNAfiemiJjOPrFvr-j1wCKccwfu1OJh93kK_wQIyVWvPVSh1-b9MCq7NBaCT6s&usqp=CAE")
+product4 = Product.create(name: "Hebrew National Beef Franks - 10.3 oz", price: 3.72, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTy94bJMo9pkYdRppx5EVSD4liU4Uw0dZj-dncJOzgaRvkCltP6FcVz7X96etfeL9Etbx0NsgkqbrvaiYkD9XpCI2MdiMDGXHDD20ujnBwPDt3inA&usqp=CAE")
+product5 = Product.create(name: "Broccoli - 1lb", price: 2.99, image: "https://i5.walmartimages.com/asr/c721459d-3826-4461-9e79-c077d5cf191e_3.ca214f10bb3c042f473588af8b240eca.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF")
+product6 = Product.create(name: "Freshness Guaranteed Traditional Rotisserie Chicken - 44oz", price: 7.97, image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTj5lqTtgTDYL4HT430sIxnX8OYMSCpybWmrETIJ_bfiJ43DJFM7pqdgWyBc9IIZAi2utQuV5kB6xFkWY7v2tNbsHvUTN-8myWMYKT5ggRAERXQlsPU6tp6Pt3-bl1v&usqp=CAE")
+product7 = Product.create(name: "Organic Honeycrisp Apples - 3lbs", price: 9.99, image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTke0dgEbYMeXzH6KfvIHd_eENURHyL_nvRblwaB4lX8qiuCRuJdnC79eGNVzbCtOBRrXmpaeNuoBmmc2JHC99LzRzQ9xA_xsvMpCx6928cibFprQ&usqp=CAE")
