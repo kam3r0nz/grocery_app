@@ -1,3 +1,61 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#navbar {
+  background-color: #000;
+  padding: 15px;
+}
+
+#navbar a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  color: #AAA;
+  text-decoration: none;
+}
+
+.product-card {
+  font-size: 18px;
+  height: 150px;
+  width: 300px;
+  margin: 0 15px 15px 15px; 
+  padding: 10px;
+  float: left;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  float: left;
+  padding-right: 25px;
+}
+
+.add-cart-btn {
+  color: #FFF;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+h1 {
+  margin-left: 25px;
+}
+
+.align-right {
+  color:green;
 }
