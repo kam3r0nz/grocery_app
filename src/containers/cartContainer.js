@@ -1,11 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import CartList from '../components/cartList'
 
 class CartContainer extends React.Component {
     
     render() {
         return (
-            <h1>This is the cart</h1>
+            < >
+            <h1>Cart</h1>
+            <CartList cart={this.props.cart}/>
+            </ >
         )
     }
 }
