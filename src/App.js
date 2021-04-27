@@ -3,7 +3,7 @@ import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './components/Home'
 import ProductsContainer from './containers/productsContainer'
-import Cart from './components/Cart'
+import CartContainer from './containers/cartContainer'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <NavBar />
         <Route exact path="/" component={Home}/>
         <Route exact path="/products" component={ProductsContainer}/>
-        <Route exact path="/cart" component={Cart}/>
+        <Route exact path="/cart" component={CartContainer}/>
       </Router>
     </div>
   );
