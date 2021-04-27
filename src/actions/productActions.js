@@ -7,8 +7,8 @@ export function fetchProducts() {
     }
 }
 
-export function addToCart(productId) {
+export function addToCart(product) {
     return dispatch => {
-        dispatch({type: 'ADD_TO_CART', productId})
+        dispatch({type: 'ADD_TO_CART', product})
     }
 }
