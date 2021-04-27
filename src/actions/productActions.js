@@ -6,3 +6,9 @@ export function fetchProducts() {
             .then(products => dispatch({type: 'ADD_PRODUCTS', products}))
     }
 }
+
+export function addToCart(productId) {
+    return dispatch => {
+        dispatch{type: ADD_TO_CART, productId}
+    }
+}
