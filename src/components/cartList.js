@@ -14,15 +14,10 @@ class CartList extends React.Component {
         }
     }
 
-    // cartTotal = () => {
-    //     return this.props.cart.concat(product.price)
-    // }
-
     render() {
         return (
             < >
             {this.listCart()}
-            {/* {this.cartTotal()} */}
             </ >
         )
     }
