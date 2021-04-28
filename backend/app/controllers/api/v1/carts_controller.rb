@@ -1,8 +1,8 @@
 class Api::V1::CartsController < ApplicationController
     def index
         if filter_carts
-            carts = @user.carts
-            render json: carts, include: [:products]
+            cart = @user.cart
+            render json: cart, include: [:products]
         else
             carts = Cart.all
             render json: carts, include: [:products]

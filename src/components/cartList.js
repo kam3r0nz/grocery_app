@@ -12,7 +12,8 @@ class CartList extends React.Component {
         if (this.props.user.carts === null || this.props.user.length === 0) {
             return <p>Your cart is currently empty.</p>
         } else {
-            return <div>{this.props.user.carts.map(cart => cart.products)}</div>
+            return <div>this is your cart</div>
+            // return <div>{cartProducts.map(product => product.name)}</div>
         }
     }
 
