@@ -9,7 +9,7 @@ class CartContainer extends React.Component {
         return (
             < >
             <h1>Cart</h1>
-            <CartList user={this.props.user} fetchCarts={this.props.fetchCarts}/>
+            <CartList user={this.props.user} fetchCarts={this.props.fetchCarts} cart={this.props.cart}/>
             </ >
         )
     }
@@ -17,7 +17,8 @@ class CartContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        user: state.user
+        user: state.user,
+        cart: state.cart
     }
 }
 

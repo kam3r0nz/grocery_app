@@ -9,11 +9,10 @@ class CartList extends React.Component {
     }
 
     listCart = () => {
-        if (this.props.user.carts === null || this.props.user.length === 0) {
+        if (this.props.user.cart === null || this.props.user.length === 0) {
             return <p>Your cart is currently empty.</p>
         } else {
-            return <div>this is your cart</div>
-            // return <div>{cartProducts.map(product => product.name)}</div>
+            return <div>{this.props.cart.products.map(product => product.name)}</div>
         }
     }
 
