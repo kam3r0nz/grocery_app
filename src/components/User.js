@@ -24,6 +24,7 @@ class User extends React.Component {
     }
 
     render() {
+        if (this.props.users.length === 0) {
         return (
             <div className="user-form">
                 <form onSubmit={this.handleOnSubmit}>
@@ -33,6 +34,13 @@ class User extends React.Component {
                 </form>
             </div>
         )
+        } else {
+            return (
+                <div>
+                    <h1>Hi {this.props.users.name}</h1>
+                </div>
+            )
+        }
     }
 
 }
