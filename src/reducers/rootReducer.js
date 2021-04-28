@@ -1,13 +1,23 @@
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
+    user: usersReducer,
     cart: cartReducer,
     products: productsReducer
 })
 
 export default rootReducer
 
-function cartReducer(state = [], action){
+function usersReducer(state = [], action) {
+    switch(action.type) {
+        case 'ADD_USER':
+            return [...state, action.user]
+        default:
+            return state
+    }
+}
+
+function cartReducer(state = [], action) {
     switch(action.type) {
         case 'ADD_TO_CART':
             return [...state, action.product
@@ -17,7 +27,7 @@ function cartReducer(state = [], action){
     }
 }
 
-function productsReducer(state = [], action){
+function productsReducer(state = [], action) {
     switch(action.type) {
         case 'FETCH_PRODUCTS':
             return [...state]

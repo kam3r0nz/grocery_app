@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { findOrCreateUser } from '../actions/userActions'
 
 class User extends React.Component {
 
@@ -12,21 +14,6 @@ class User extends React.Component {
         }
     }
 
-    findOrCreateUser(e) {
-        return fetch('http://localhost:3001/api/v1/users', {
-                method: 'POST',
-                headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-                },
-                body: JSON.stringify({user: {name: e.target.value}})
-                     
-        })
-                .then(resp => {
-                    return resp.json()
-                })
-    }
-
     handleOnChange = (e) => {
         this.setState({
             name: e.target.value
@@ -35,7 +22,7 @@ class User extends React.Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault()
-        this.findOrCreateUser(e)
+        this.props.findOrCreateUser(e)
             .then(user => new User(user))
     }
 
@@ -53,4 +40,10 @@ class User extends React.Component {
 
 }
 
-export default User
+const mapStateToProps = state => {
+    return {
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps, { findOrCreateUser })(User)
