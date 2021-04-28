@@ -22,8 +22,8 @@ class User extends React.Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault()
-        this.props.findOrCreateUser(e)
-            .then(user => new User(user))
+        const user = this.state
+        this.props.findOrCreateUser(user)
     }
 
     render() {
