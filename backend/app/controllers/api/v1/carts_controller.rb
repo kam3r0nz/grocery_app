@@ -14,6 +14,15 @@ class Api::V1::CartsController < ApplicationController
         end
     end
 
+    def show
+        cart = Cart.find_by(id: params[:id])
+        if user
+            render json: {id: cart.id, products: cart.products}
+        else
+            render json: { Error: "That cart does not exist." }
+        end
+    end
+
     private
 
     def cart_params
