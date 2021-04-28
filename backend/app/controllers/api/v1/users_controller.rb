@@ -14,6 +14,15 @@ class Api::V1::UsersController < ApplicationController
         end
     end
 
+    def show
+        user = User.find_by(id: params[:id])
+        if user
+            render json: {id: user.id, name: user.name, cart: user.cart}
+        else
+            render json: { Error: "That user does not exist." }
+        end
+    end
+
     private
 
     def user_params

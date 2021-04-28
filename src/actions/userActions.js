@@ -8,6 +8,6 @@ export function findOrCreateUser(user) {
             },
             body: JSON.stringify({user: user})})
             .then(resp => resp.json())
-            .then(user => console.log(user))
+            .then(user => dispatch({type: 'ADD_USER', user}))
     }
 }
