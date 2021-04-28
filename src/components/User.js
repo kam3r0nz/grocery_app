@@ -4,11 +4,8 @@ import { findOrCreateUser } from '../actions/userActions'
 
 class User extends React.Component {
 
-    constructor(user) {
+    constructor() {
         super()
-        this.id = user.id
-        this.name = user.name
-        this.cart = user.cart
         this.state = {
             name: ''
         }
@@ -42,7 +39,7 @@ class User extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        user: state.user
+        users: state.users
     }
 }
 

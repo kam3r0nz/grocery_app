@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
-    user: usersReducer,
+    users: usersReducer,
     cart: cartReducer,
     products: productsReducer
 })
@@ -11,7 +11,7 @@ export default rootReducer
 function usersReducer(state = [], action) {
     switch(action.type) {
         case 'ADD_USER':
-            return [...state, action.user]
+            return action.user
         default:
             return state
     }
