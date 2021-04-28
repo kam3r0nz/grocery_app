@@ -1,7 +1,13 @@
 class Api::V1::CartsController < ApplicationController
     def index
-        carts = Cart.all
-        render json: carts, include: [:products]
+        if filter_carts
+            carts = @user.carts
+            render json: carts, include: [:products]
+        else
+            carts = Cart.all
+            render json: carts, include: [:products]
+        end
+        
     end
 
     def create
@@ -16,7 +22,7 @@ class Api::V1::CartsController < ApplicationController
 
     def show
         cart = Cart.find_by(id: params[:id])
-        if user
+        if cart
             render json: {id: cart.id, products: cart.products}
         else
             render json: { Error: "That cart does not exist." }
@@ -27,5 +33,9 @@ class Api::V1::CartsController < ApplicationController
 
     def cart_params
         params.require(:cart).permit(:id)
+    end
+
+    def filter_carts
+        params[:user_id] && @user = User.find_by_id(params[:user_id])
     end
 end
