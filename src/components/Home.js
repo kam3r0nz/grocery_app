@@ -1,8 +1,11 @@
 import React from 'react'
+import UserInput from './userInput'
 
 function Home() {
 
-    return <h1>Home</h1>
+    return (
+        <UserInput/>
+    )
 
 }
 
