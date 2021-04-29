@@ -12,10 +12,8 @@ class User extends React.Component {
         }
     }
 
-    componentDidUpdate() {
-        if (this.props.user.length !== 0) {
-            this.props.fetchCart(this.props.user.id)
-          }
+    componentDidMount() {
+        this.props.fetchCart(this.props.user.id)
     }
 
     handleOnChange = (e) => {
@@ -28,7 +26,6 @@ class User extends React.Component {
         e.preventDefault()
         const user = this.state
         this.props.findOrCreateUser(user)
-        this.props.fetchCart(this.props.user.id)
     }
 
     render() {

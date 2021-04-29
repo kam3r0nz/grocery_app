@@ -17,7 +17,7 @@ class ProductsList extends React.Component {
                 <img className="product-image" src={product.image} alt={product.name}/><h6>{product.name}</h6>
                 Price: ${product.price}<br/>
                 <button className="cart-btn" onClick={() => this.handleOnClick(product)}>View</button>
-                <button className="cart-btn" onClick={() => this.handleOnClick(product)}>Add To Cart</button>
+                <button className="cart-btn" onClick={() => this.handleOnClick(product.id)}>Add To Cart</button>
             </div>)
     }
 
