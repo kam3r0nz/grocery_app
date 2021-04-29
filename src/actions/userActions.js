@@ -7,7 +7,7 @@ export function findOrCreateUser(user) {
             'Accept': 'application/json'
             },
             body: JSON.stringify({user: user})})
-            .then(resp => resp.json())
-            .then(user => dispatch({type: 'ADD_USER', user}))
+                .then(resp => resp.json())
+                .then(user => dispatch({type: 'ADD_USER', user}))
     }
 }
