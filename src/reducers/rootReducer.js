@@ -19,7 +19,7 @@ function userReducer(state = [], action) {
 
 function cartReducer(state = [], action) {
     switch(action.type) {
-        case 'ADD_TO_CART':
+        case 'ADD_CART':
             return action.cart
         case 'REMOVE_FROM_CART':
             return state

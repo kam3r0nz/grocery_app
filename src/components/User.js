@@ -22,7 +22,7 @@ class User extends React.Component {
         e.preventDefault()
         const user = this.state
         this.props.findOrCreateUser(user)
-        this.props.fetchCart(user.id)
+        this.props.fetchCart(this.props.user.id)
     }
 
     render() {

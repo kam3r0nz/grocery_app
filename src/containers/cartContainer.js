@@ -4,12 +4,6 @@ import CartList from '../components/cartList'
 import { fetchCart } from '../actions/cartActions'
 
 class CartContainer extends React.Component {
-
-    componentDidMount() {
-        if (this.props.user.length !== 0) {
-            this.props.fetchCart(this.props.user.id)
-        }
-    }
     
     render() {
         return (
@@ -23,8 +17,7 @@ class CartContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        user: state.user,
-        cart: state.cart
+        user: state.user, cart: state.cart
     }
 }
 
