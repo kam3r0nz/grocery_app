@@ -43,13 +43,13 @@ code {
   padding-right: 25px;
 }
 
-.add-cart-btn {
+.cart-btn {
   color: #FFF;
   background-color: red;
   border: none;
   border-radius: 5px;
   padding: 8px;
-  margin-top: 8px;
+  margin: 8px 5px 0 0;
 }
 
 h1 {
