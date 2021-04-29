@@ -1,4 +1,4 @@
-export function fetchCarts(userId) {
+export function fetchCart(userId) {
     return dispatch => {
         fetch(`http://localhost:3001/api/v1/users/${userId}/carts`)
             .then(resp => resp.json())

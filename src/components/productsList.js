@@ -2,8 +2,8 @@ import React from 'react'
 
 class ProductsList extends React.Component {
 
-    handleOnClick = (userId, product) => {
-        this.props.addToCart(this.props.user.id, product)
+    handleOnClick = (userId, cartId, product) => {
+        this.props.addToCart(this.props.user.id, this.props.cart.id, product)
     }
 
     listProducts = () => {

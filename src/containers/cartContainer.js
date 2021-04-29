@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import CartList from '../components/cartList'
-import { fetchCarts } from '../actions/cartActions'
+import { fetchCart } from '../actions/cartActions'
 
 class CartContainer extends React.Component {
 
     componentDidMount() {
         if (this.props.user.length !== 0) {
-            this.props.fetchCarts(this.props.user.id)
+            this.props.fetchCart(this.props.user.id)
         }
     }
     
@@ -15,7 +15,7 @@ class CartContainer extends React.Component {
         return (
             < >
             <h1>Cart</h1>
-            <CartList user={this.props.user} fetchCarts={this.props.fetchCarts} cart={this.props.cart}/>
+            <CartList user={this.props.user} cart={this.props.cart}/>
             </ >
         )
     }
@@ -28,4 +28,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchCarts })(CartContainer)
+export default connect(mapStateToProps, { fetchCart })(CartContainer)

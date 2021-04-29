@@ -1,12 +1,16 @@
 import React from 'react'
+import User from '../components/User'
+import { fetchCart } from '../actions/cartActions'
 
-function Home() {
+class Home extends React.Component {
 
-    return (
-        < >
-        </ >
-    )
-
+    render() {
+        return (
+            < >
+                <User/>
+            </ >
+        )
+    }
 }
 
 export default Home
