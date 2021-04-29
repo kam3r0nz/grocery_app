@@ -15,9 +15,8 @@ export function addToCart(userId, product) {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify({products: product})
+            body: JSON.stringify({products: product})})
                 .then(resp => resp.json())
                 .then(product => console.log(product))
-        })
     }
 }

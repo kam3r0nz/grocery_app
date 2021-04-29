@@ -13,7 +13,7 @@ class ProductsContainer extends React.Component {
         return (
             < >
             <h1>Products</h1>
-            <ProductsList products={this.props.products} addToCart={this.props.addToCart}/>
+            <ProductsList user={this.props.user} products={this.props.products} addToCart={this.props.addToCart}/>
             </ >
         )
     }
@@ -22,7 +22,7 @@ class ProductsContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        cart: state.cart, products: state.products
+        user: state.user, cart: state.cart, products: state.products
     }
 }
 
