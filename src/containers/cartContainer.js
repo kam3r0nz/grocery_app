@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import CartList from '../components/cartList'
-import { fetchCart } from '../actions/cartActions'
 
 class CartContainer extends React.Component {
     
@@ -21,4 +20,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchCart })(CartContainer)
+export default connect(mapStateToProps)(CartContainer)

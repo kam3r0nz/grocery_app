@@ -42,8 +42,8 @@ class User extends React.Component {
         } else {
             return (
                 <div className="user-container">
-                    <h1>Hi {this.props.user.name}</h1>
-                    <p className="p-text">Please click products to begin shopping!</p>
+                    <h1>Hi {this.props.user.name}!</h1>
+                    <p className="p-text">Please click products to begin shopping.</p>
                 </div>
             )
         }
