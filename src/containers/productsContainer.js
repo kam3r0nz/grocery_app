@@ -5,10 +5,6 @@ import ProductsList from '../components/productsList'
 
 class ProductsContainer extends React.Component {
 
-    componentDidMount() {
-        this.props.fetchProducts()
-    }
-
     render() {
         return (
             < >
@@ -26,4 +22,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchProducts, addToCart })(ProductsContainer)
+export default connect(mapStateToProps, { addToCart })(ProductsContainer)

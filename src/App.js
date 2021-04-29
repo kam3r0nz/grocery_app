@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { findOrCreateUser } from './actions/userActions'
 import { fetchCart } from './actions/cartActions'
+import { fetchProducts } from './actions/productActions'
 import User from './components/User'
 import ProductsContainer from './containers/productsContainer'
 import CartContainer from './containers/cartContainer'
@@ -13,7 +14,10 @@ import CartContainer from './containers/cartContainer'
 class App extends React.Component {
 
   componentDidMount() {
-
+    this.props.fetchProducts()
+    if (this.props.user !== null) {
+      this.props.fetchCart()
+    }
   }
 
   render() {
@@ -23,7 +27,7 @@ class App extends React.Component {
           <NavBar />
           <Route exact path="/" component={User} user={this.props.user} cart={this.props.cart}/>
           <Route exact path="/products" component={ProductsContainer} products={this.props.cart}/>
-          <Route exact path="/cart" component={CartContainer} cart={this.props.cart}/>
+          <Route exact path="/cart" component={CartContainer}/>
         </Router>
       </div>
     )
@@ -32,11 +36,9 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    user: state.user,
-    cart: state.cart,
-    products: state.products
+    user: state.user, cart: state.cart, products: state.products
   }
 
 }
 
-export default connect(mapStateToProps,  { fetchCart })(App)
+export default connect(mapStateToProps, { fetchCart, fetchProducts })(App)
