@@ -13,7 +13,7 @@ class CartList extends React.Component {
 
     listCart = () => {
         if (this.props.cart === null || this.props.cart.length === 0 || this.props.user.length === 0) {
-            return <p>Your cart is currently empty.</p>
+            return <p className="p-text">Your cart is currently empty.</p>
         } else {
             return <div>{this.listProducts()}</div>
         }

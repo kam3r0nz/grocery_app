@@ -28,18 +28,22 @@ class User extends React.Component {
     render() {
         if (this.props.user.length === 0) {
             return (
-                <div className="user-form">
-                    <form onSubmit={this.handleOnSubmit}>
-                        <input type="text" onChange={this.handleOnChange} name="name" placeholder="Enter name"/>
-                        <input type="submit"/>
-                    </form>
-                </div>
+                < >
+                    <h1>Welcome to Grocery!</h1>
+                    <p className="p-text">Please enter your name below to begin shopping and retrieve your cart.</p>
+                    <div className="user-form">
+                        <form onSubmit={this.handleOnSubmit}>
+                            <input type="text" onChange={this.handleOnChange} name="name" placeholder="Enter name"/>
+                            <input type="submit"/>
+                        </form>
+                    </div>
+                </ >
             )
         } else {
             return (
                 <div className="user-container">
                     <h1>Hi {this.props.user.name}</h1>
-                    <p>Please click products to begin shopping!</p>
+                    <p className="p-text">Please click products to begin shopping!</p>
                 </div>
             )
         }

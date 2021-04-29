@@ -25,8 +25,8 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <NavBar />
-          <Route exact path="/" component={User} user={this.props.user} cart={this.props.cart}/>
-          <Route exact path="/products" component={ProductsContainer} products={this.props.cart}/>
+          <Route exact path="/" component={User} />
+          <Route exact path="/products" component={ProductsContainer} />
           <Route exact path="/cart" component={CartContainer}/>
         </Router>
       </div>
