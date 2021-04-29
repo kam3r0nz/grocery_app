@@ -4,6 +4,12 @@ import CartList from '../components/cartList'
 import { fetchCarts } from '../actions/cartActions'
 
 class CartContainer extends React.Component {
+
+    componentDidMount() {
+        if (this.props.user.length !== 0) {
+            this.props.fetchCarts(this.props.user.id)
+        }
+    }
     
     render() {
         return (
