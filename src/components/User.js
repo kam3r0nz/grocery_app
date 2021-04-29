@@ -12,6 +12,12 @@ class User extends React.Component {
         }
     }
 
+    componentDidUpdate() {
+        if (this.props.user.length !== 0) {
+            this.props.fetchCart(this.props.user.id)
+          }
+    }
+
     handleOnChange = (e) => {
         this.setState({
             name: e.target.value

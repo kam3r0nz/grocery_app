@@ -6,6 +6,10 @@ class ProductsList extends React.Component {
         this.props.addToCart(this.props.user.id, this.props.cart.id, product)
     }
 
+    handleOnViewClick = () => {
+        
+    }
+
     listProducts = () => {
         return this.props.products.map(product => 
             <div key={product.id} className="product-card">
