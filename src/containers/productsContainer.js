@@ -9,7 +9,7 @@ class ProductsContainer extends React.Component {
         return (
             < >
             <h1>Products</h1>
-            <ProductsList user={this.props.user} products={this.props.products} addToCart={this.props.addToCart}/>
+            <ProductsList user={this.props.user} products={this.props.products} cart={this.props.cart} addToCart={this.props.addToCart}/>
             </ >
         )
     }

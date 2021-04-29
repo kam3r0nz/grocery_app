@@ -7,9 +7,9 @@ export function fetchProducts() {
     }
 }
 
-export function addToCart(userId, cartId, product) {
+export function addToCart(cartId, product) {
     return dispatch => {
-        fetch(`http://localhost:3001/api/v1/users/${userId}/carts/${cartId}/products`, {
+        fetch(`http://localhost:3001/api/v1/carts/${cartId}/products`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
