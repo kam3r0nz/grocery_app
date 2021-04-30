@@ -2,6 +2,11 @@ import React from 'react'
 
 class CartList extends React.Component {
 
+    handleOnClick = (product) => {
+        
+
+    }
+
     listProducts = () => {
         const cartProducts = this.props.cart[0]
         return cartProducts.products.map(product => 

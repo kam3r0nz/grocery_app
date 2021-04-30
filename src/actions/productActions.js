@@ -20,3 +20,10 @@ export function addToCart(userId, cartId, product) {
                 .then(product => console.log(product))
     }
 }
+
+export function removeFromCart(userId, cartId, productId) {
+    return dispatch => {
+        fetch()
+    }
+
+}

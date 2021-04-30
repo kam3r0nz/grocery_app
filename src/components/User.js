@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { findOrCreateUser } from '../actions/userActions'
-import { fetchCart } from '../actions/cartActions'
+import { fetchCart, findOrCreateCart } from '../actions/cartActions'
 
 class User extends React.Component {
 
@@ -13,7 +13,7 @@ class User extends React.Component {
     }
 
     fetchCart() {
-        this.props.fetchCart(this.props.user.id)
+        this.props.findOrCreateCart(this.props.user.id, this.props.cart)
     }
 
     handleOnChange = (e) => {
@@ -61,4 +61,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { findOrCreateUser, fetchCart })(User)
+export default connect(mapStateToProps, { findOrCreateUser, fetchCart, findOrCreateCart })(User)
