@@ -17,7 +17,7 @@ function userReducer(state = [], action) {
     }
 }
 
-function cartReducer(state = [], action) {
+function cartReducer(state = {product: [], total: ''}, action) {
     switch(action.type) {
         case 'ADD_TO_CART':
             return [...state, action.product]
