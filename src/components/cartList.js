@@ -3,7 +3,8 @@ import React from 'react'
 class CartList extends React.Component {
 
     listProducts = () => {
-        return this.props.cart.products.map(product => 
+        const cartProducts = this.props.cart[0]
+        return cartProducts.products.map(product => 
             <div key={product.id} className="product-card">
                 <img className="product-image" src={product.image} alt={product.name}/><h6>{product.name}</h6>
                 Price: ${product.price}<br/> 

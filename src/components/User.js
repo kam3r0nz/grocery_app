@@ -12,7 +12,7 @@ class User extends React.Component {
         }
     }
 
-    componentDidMount() {
+    fetchCart() {
         this.props.fetchCart(this.props.user.id)
     }
 
@@ -26,6 +26,7 @@ class User extends React.Component {
         e.preventDefault()
         const user = this.state
         this.props.findOrCreateUser(user)
+        this.fetchCart()
     }
 
     render() {

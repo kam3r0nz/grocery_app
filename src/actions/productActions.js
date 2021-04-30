@@ -9,7 +9,6 @@ export function fetchProducts() {
 
 export function addToCart(userId, cartId, product) {
     return dispatch => {
-        debugger
         fetch(`http://localhost:3001/api/v1/users/${userId}/carts/${cartId}/products`, {
             method: 'POST',
             headers: {
