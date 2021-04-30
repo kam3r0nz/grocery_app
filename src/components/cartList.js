@@ -8,7 +8,7 @@ class CartList extends React.Component {
     }
 
     listProducts = () => {
-        return this.props.cart.products.map(product => 
+        return this.props.cart.map(product => 
             <div key={product.id} className="product-card">
                 <img className="product-image" src={product.image} alt={product.name}/><h6>{product.name}</h6>
                 Price: ${product.price}<br/> 
@@ -17,7 +17,7 @@ class CartList extends React.Component {
     }
 
     listCart = () => {
-        if (this.props.cart.products.length === 0 || this.props.cart.length === 0 || this.props.user.length === 0) {
+        if (this.props.cart.length === 0 || this.props.cart.length === 0 || this.props.user.length === 0) {
             return <p className="p-text">Your cart is currently empty.</p>
         } else {
             return <div>{this.listProducts()}</div>
