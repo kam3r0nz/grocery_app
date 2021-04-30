@@ -13,7 +13,7 @@ class User extends React.Component {
     }
 
     fetchCart() {
-        this.props.findOrCreateCart(this.props.user.id, this.props.cart)
+        this.props.fetchCart(this.props.user.id)
     }
 
     handleOnChange = (e) => {

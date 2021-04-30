@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import CartList from '../components/cartList'
+import { removeFromCart } from '../actions/productActions'
 
 class CartContainer extends React.Component {
     
@@ -8,7 +9,7 @@ class CartContainer extends React.Component {
         return (
             < >
             <h1>Cart</h1>
-            <CartList user={this.props.user} cart={this.props.cart}/>
+            <CartList user={this.props.user} cart={this.props.cart} removeFromCart={this.props.removeFromCart}/>
             </ >
         )
     }
@@ -20,4 +21,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(CartContainer)
+export default connect(mapStateToProps, { removeFromCart })(CartContainer)
