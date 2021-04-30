@@ -9,15 +9,15 @@ class Api::V1::ProductsController < ApplicationController
         end
     end
 
-    # def create
-    #     if Product.find_by(id: product_params[:id])
-    #         product = Product.find_by(id: product_params[:id])
-    #         redirect_to "/api/v1/carts/#{cart.id}"
-    #     else
-    #         product = Product.create(product_params)
-    #         render json: product
-    #     end
-    # end
+    def create
+        if Product.find_by(id: product_params[:id])
+            product = Product.find_by(id: product_params[:id])
+            redirect_to "/api/v1/carts/#{cart.id}"
+        else
+            product = Product.create(product_params)
+            render json: product
+        end
+    end
 
     def show
         product = Product.find_by(id: params[:id])

@@ -21,6 +21,8 @@ function cartReducer(state = [], action) {
     switch(action.type) {
         case 'ADD_CART':
             return action.carts[0]
+        case 'ADD_TO_CART':
+            return [...state, action.product]
         case 'REMOVE_FROM_CART':
             return state
         default:
