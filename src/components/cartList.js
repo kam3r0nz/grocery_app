@@ -3,7 +3,7 @@ import React from 'react'
 class CartList extends React.Component {
 
     handleOnClick = (product) => {
-        this.props.removeFromCart(this.props.user.id, this.props.user.cart.id, product)
+        this.props.removeFromCart(this.props.user.id, this.props.user.cart.id, product.id)
 
     }
 
