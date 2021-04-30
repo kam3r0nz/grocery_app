@@ -20,7 +20,7 @@ function userReducer(state = [], action) {
 function cartReducer(state = [], action) {
     switch(action.type) {
         case 'ADD_CART':
-            return action.cart
+            return action.carts[0]
         case 'REMOVE_FROM_CART':
             return state
         default:

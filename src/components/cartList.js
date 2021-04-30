@@ -3,13 +3,12 @@ import React from 'react'
 class CartList extends React.Component {
 
     handleOnClick = (product) => {
-        this.props.removeFromCart(this.props.user.id, this.props.user.cart.id, product.id)
+        this.props.removeFromCart(this.props.user.id, this.props.cart.id, product.id)
 
     }
 
     listProducts = () => {
-        const cartProducts = this.props.cart[0]
-        return cartProducts.products.map(product => 
+        return this.props.cart.products.map(product => 
             <div key={product.id} className="product-card">
                 <img className="product-image" src={product.image} alt={product.name}/><h6>{product.name}</h6>
                 Price: ${product.price}<br/> 
