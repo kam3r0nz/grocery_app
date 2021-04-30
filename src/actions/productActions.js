@@ -29,7 +29,7 @@ export function removeFromCart(userId, cartId, productId) {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify({productId: cartId})})
+            body: JSON.stringify({productId: productId})})
                 .then(resp => resp.json())
                 .then(product => console.log(product))
     }
