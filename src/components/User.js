@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { findOrCreateUser } from '../actions/userActions'
-import { fetchCart, findOrCreateCart } from '../actions/cartActions'
 
 class User extends React.Component {
 
@@ -56,4 +55,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { findOrCreateUser, fetchCart, findOrCreateCart })(User)
+export default connect(mapStateToProps, { findOrCreateUser })(User)

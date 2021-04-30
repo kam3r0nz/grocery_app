@@ -11,16 +11,5 @@ export function addToCart(product) {
     return dispatch => dispatch({type: 'ADD_TO_CART', product})
 }
 
-export function removeFromCart(userId, cartId, productId) {
-    return dispatch => {
-        fetch(`http://localhost:3001/api/v1/users/${userId}/carts/${cartId}/products/${productId}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({productId: productId})})
-                .then(resp => resp.json())
-                .then(product => console.log(product))
-    }
+export function removeFromCart(product) {
 }
