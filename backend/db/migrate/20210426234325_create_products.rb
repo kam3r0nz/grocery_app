@@ -4,7 +4,6 @@ class CreateProducts < ActiveRecord::Migration[6.1]
       t.string :name
       t.decimal :price
       t.string :image
-      t.belongs_to :cart
     end
   end
 end
