@@ -26,7 +26,7 @@ function cartReducer(state = {products: [], total: 0}, action) {
                 total: state.total + price
             }
         case 'REMOVE_FROM_CART':
-            return state
+            return state.products.filter(product => product.id !== action.product.id)
         default:
             return state
     }

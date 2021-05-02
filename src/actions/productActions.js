@@ -12,4 +12,5 @@ export function addToCart(product) {
 }
 
 export function removeFromCart(product) {
+    return dispatch => dispatch({type: 'REMOVE_FROM_CART', product})
 }

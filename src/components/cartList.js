@@ -3,7 +3,7 @@ import React from 'react'
 class CartList extends React.Component {
 
     handleOnClick = (product) => {
-        this.props.removeFromCart(this.props.user.id, this.props.cart.id, product.id)
+        this.props.removeFromCart(product)
 
     }
 
@@ -17,7 +17,7 @@ class CartList extends React.Component {
     }
 
     listCart = () => {
-        if (this.props.cart.products.length === 0) {
+        if (this.props.cart.length === 0 || this.props.cart.products.length === 0) {
             return <p className="p-text">Your cart is currently empty.</p>
         } else {
             return <div>{this.listProducts()}</div>

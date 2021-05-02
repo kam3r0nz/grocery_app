@@ -28,7 +28,7 @@ class User extends React.Component {
             return (
                 < >
                     <h1>Welcome to Grocery!</h1>
-                    <p className="p-text">Please enter your name below to begin shopping and retrieve your cart.</p>
+                    <p className="p-text">Please enter your name below to add to your shopping cart.</p>
                     <div className="user-form">
                         <form onSubmit={this.handleOnSubmit}>
                             <input type="text" onChange={this.handleOnChange} name="name" placeholder="Enter name"/>
