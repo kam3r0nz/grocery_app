@@ -22,7 +22,7 @@ class App extends React.Component {
           <NavBar user={this.props.user}/>
           <Route exact path="/" component={User} />
           <Route exact path="/products" component={ProductsContainer} />
-          <Route exact path="/cart" component={CartContainer}/>
+          <Route exact path="/cart" component={CartContainer} />
         </Router>
       </div>
     )
