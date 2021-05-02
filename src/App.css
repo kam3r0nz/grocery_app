@@ -68,3 +68,10 @@ h6 {
 .user-form {
   margin-left: 25px;
 }
+
+#cart-count {
+  color: red;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 25px;
+}

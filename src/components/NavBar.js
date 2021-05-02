@@ -10,9 +10,9 @@ class NavBar extends React.Component {
         }
     }
 
-    showCartLink() {
+    showUserLinks() {
         if(this.props.user.length !== 0) {
-            return <NavLink className="align-right" to="/cart">Cart {this.showCartProductCount()}</NavLink>
+            return < > <NavLink to="/products">Products</NavLink> &nbsp; <NavLink className="align-right" to="/cart">Cart <span id="cart-count">{this.showCartProductCount()}</span></NavLink> </ >
         }
     }
 
@@ -20,8 +20,7 @@ class NavBar extends React.Component {
         return (
             <div id="navbar">
                 <NavLink to="/">Home</NavLink> &nbsp;
-                <NavLink to="/products">Products</NavLink> &nbsp;
-                {this.showCartLink()}
+                {this.showUserLinks()}
             </div>
         )
     }
