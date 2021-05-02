@@ -1,13 +1,23 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-function NavBar() {
+class NavBar extends React.Component {
 
-    return <div id="navbar">
-        <NavLink to="/">Home</NavLink> &nbsp;
-        <NavLink to="/products">Products</NavLink> &nbsp;
-        <NavLink className="align-right" to="/cart">Cart</NavLink>
-    </div>
+    showCartLink() {
+        if(this.props.user.length !== 0) {
+            return <NavLink className="align-right" to="/cart">Cart</NavLink>
+        }
+    }
+
+    render() {
+        return (
+            <div id="navbar">
+                <NavLink to="/">Home</NavLink> &nbsp;
+                <NavLink to="/products">Products</NavLink> &nbsp;
+                {this.showCartLink()}
+            </div>
+        )
+    }
 }
 
 export default NavBar

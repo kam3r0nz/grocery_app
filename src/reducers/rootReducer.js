@@ -20,7 +20,7 @@ function userReducer(state = [], action) {
 function cartReducer(state = {products: [], total: 0}, action) {
     switch(action.type) {
         case 'ADD_TO_CART':
-            let price = parseFloat(action.product.price)
+            let price = Number(action.product.price)
             return { ...state, 
                 products: [...state.products, action.product],
                 total: state.total + price
