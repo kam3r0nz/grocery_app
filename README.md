@@ -22,6 +22,9 @@ Step 4) Execute: `cd ..` <br>
 Step 5) Run: `npm install` <br>
 Step 6) Run: `npm start`
 
+## Demo
+https://youtu.be/YKmzZv0ADyk
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/kam3r0nz/grocery_app. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
