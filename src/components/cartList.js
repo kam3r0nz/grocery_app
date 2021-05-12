@@ -1,4 +1,5 @@
 import React from 'react'
+import RemoveFromCartButton from './removeFromCartButton'
 
 class CartList extends React.Component {
 
@@ -12,7 +13,9 @@ class CartList extends React.Component {
             <div key={product.id} className="product-card">
                 <img className="product-image" src={product.image} alt={product.name}/><h6>{product.name}</h6>
                 Price: ${product.price}<br/> 
-                <button className="cart-btn" onClick={() => this.handleOnClick(product)}>Remove From Cart</button>
+                <div onClick={() => this.handleOnClick(product)}>
+                    <RemoveFromCartButton/>
+                </div>
             </div>)
     }
 
