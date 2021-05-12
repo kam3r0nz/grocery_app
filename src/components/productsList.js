@@ -1,5 +1,5 @@
 import React from 'react'
-import AddToCartButton from './addToCartButton'
+import Product from './product'
 
 class ProductsList extends React.Component {
 
@@ -9,13 +9,10 @@ class ProductsList extends React.Component {
 
     listProducts = () => {
         return this.props.products.map(product => 
-            <div key={product.id} className="product-card">
-                <img className="product-image" src={product.image} alt={product.name}/><h6>{product.name}</h6>
-                Price: ${product.price}<br/>
-                <div onClick={() => this.handleOnClick(product)}>
-                    <AddToCartButton/>
-                </div>
-            </div>)
+            < >
+                <Product key={product.id} product={product} name={product.name} image={product.image} price={product.price} addToCart={this.handleOnClick}/>
+            </ >
+        )
     }
 
     render() {
