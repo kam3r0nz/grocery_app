@@ -17,7 +17,7 @@ class CartContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        user: state.user, cart: state.cart
+        user: state.user, cart: state.cart, products: state.products
     }
 }
 
