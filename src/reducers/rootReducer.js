@@ -10,14 +10,7 @@ const rootReducer = combineReducers({
 
 export default rootReducer
 
-function userReducer(state = [], action) {
-    switch(action.type) {
-        case 'ADD_USER':
-            return action.user
-        default:
-            return state
-    }
-}
+
 
 function cartReducer(state = {products: [], total: 0}, action) {
     switch(action.type) {
