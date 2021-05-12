@@ -1,5 +1,6 @@
 import React from 'react'
 import Product from './product'
+import AddToCartButton from './addToCartButton'
 
 class ProductsList extends React.Component {
 
@@ -9,8 +10,11 @@ class ProductsList extends React.Component {
 
     listProducts = () => {
         return this.props.products.map(product => 
-            <div key={product.id}>
-                <Product key={product.id} product={product} name={product.name} image={product.image} price={product.price}/>
+            <div key={product.id} className="product-card">
+                <Product product={product} name={product.name} image={product.image} price={product.price}/><br/>
+                <div onClick={() => this.handleOnClick(product)}>
+                    <AddToCartButton/>
+                </div>
             </div>
         )
     }
