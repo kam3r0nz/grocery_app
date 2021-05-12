@@ -1,4 +1,5 @@
 import React from 'react'
+import AddToCartButton from './addToCartButton'
 
 class ProductsList extends React.Component {
 
@@ -11,7 +12,9 @@ class ProductsList extends React.Component {
             <div key={product.id} className="product-card">
                 <img className="product-image" src={product.image} alt={product.name}/><h6>{product.name}</h6>
                 Price: ${product.price}<br/>
-                <button className="cart-btn" onClick={() => this.handleOnClick(product)}>Add To Cart</button>
+                <div onClick={() => this.handleOnClick(product)}>
+                    <AddToCartButton/>
+                </div>
             </div>)
     }
 
