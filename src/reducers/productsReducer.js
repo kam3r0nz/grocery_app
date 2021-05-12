@@ -1,4 +1,4 @@
-export function productsReducer(state = [], action) {
+export default function productsReducer(state = [], action) {
     switch(action.type) {
         case 'FETCH_PRODUCTS':
             return [...state]

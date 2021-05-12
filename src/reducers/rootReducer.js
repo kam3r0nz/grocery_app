@@ -3,8 +3,6 @@ import cartReducer from './cartReducer'
 import productsReducer from './productsReducer'
 import { combineReducers } from 'redux'
 
-let price
-
 const rootReducer = combineReducers({
     user: userReducer,
     cart: cartReducer,
