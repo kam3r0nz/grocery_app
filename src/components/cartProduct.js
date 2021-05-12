@@ -1,7 +1,7 @@
 import React from 'react'
-import AddToCartButton from './addToCartButton'
+import RemoveFromCartButton from './addToCartButton'
 
-class Product extends React.Component {
+class CartProduct extends React.Component {
 
     render() {
         return (
@@ -10,7 +10,7 @@ class Product extends React.Component {
                 <h6>{this.props.name}</h6>
                 Price: ${this.props.price}<br/>
                 <div onClick={this.props.addToCart}>
-                    <AddToCartButton/>
+                    <RemoveFromCartButton/>
                 </div>
             </div>
         )
@@ -18,4 +18,4 @@ class Product extends React.Component {
 
 }
 
-export default Product
+export default CartProduct

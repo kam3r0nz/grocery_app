@@ -9,9 +9,9 @@ class ProductsList extends React.Component {
 
     listProducts = () => {
         return this.props.products.map(product => 
-            < >
-                <Product key={product.id} product={product} name={product.name} image={product.image} price={product.price} addToCart={this.handleOnClick}/>
-            </ >
+            <div key={product.id}>
+                <Product key={product.id} product={product} name={product.name} image={product.image} price={product.price}/>
+            </div>
         )
     }
 
