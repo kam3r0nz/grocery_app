@@ -17,9 +17,7 @@ class ProductsContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
-    return {
-        user: state.user, cart: state.cart, products: state.products
-    }
+    return state
 }
 
 export default connect(mapStateToProps, { addToCart })(ProductsContainer)
