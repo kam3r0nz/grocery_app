@@ -19,7 +19,7 @@ class ProductsList extends React.Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault()
-
+        this.filterProducts()
         this.setState({
             searchTerm: ''
         })
@@ -40,6 +40,10 @@ class ProductsList extends React.Component {
         )
     }
 
+    filterProducts = () => {
+        return this.props.products.filter(product => product.name === this.state.searchTerm)
+    }
+
     render() {
         return (
             < >
@@ -50,7 +54,7 @@ class ProductsList extends React.Component {
                         <input type="submit" value="Search"/>
                     </form>
                 </div>
-                {this.listProducts()}
+                {!this.state.searchTerm ? this.listProducts() : this.filterProducts()}
             </ >
         )
     }
