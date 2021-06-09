@@ -5,12 +5,26 @@ import ProductsList from '../components/productsList'
 
 class ProductsContainer extends React.Component {
 
+    constructor() {
+        super()
+        this.state = {
+            searchTerm: ''
+        }
+    }
+
+    handleOnChange = (e) => {
+        this.setState({
+            searchTerm: e.target.value
+        })
+    }
+
     render() {
         return (
             < >
             <div className="search-box">
                 <form>
-                    <input type="text"/>
+                    <label for="search-text">Search Products: </label>
+                    <input type="text" name="search-text" value={this.state.searchTerm} onChange={this.handleOnChange}/>
                     <input type="submit" value="Search"/>
                 </form>
             </div>
