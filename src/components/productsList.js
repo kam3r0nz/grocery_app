@@ -4,6 +4,27 @@ import AddToCartButton from './addToCartButton'
 
 class ProductsList extends React.Component {
 
+    constructor() {
+        super()
+        this.state = {
+            searchTerm: ''
+        }
+    }
+
+    handleOnChange = (e) => {
+        this.setState({
+            searchTerm: e.target.value
+        })
+    }
+
+    handleOnSubmit = (e) => {
+        e.preventDefault()
+
+        this.setState({
+            searchTerm: ''
+        })
+    }
+
     handleOnClick = (product) => {
         this.props.addToCart(product)
     }
@@ -22,6 +43,13 @@ class ProductsList extends React.Component {
     render() {
         return (
             < >
+                <div className="search-box">
+                    <form onSubmit={this.handleOnSubmit}>
+                        <label for="search-text">Search Products: </label>
+                        <input type="text" name="search-text" value={this.state.searchTerm} onChange={this.handleOnChange}/>
+                        <input type="submit" value="Search"/>
+                    </form>
+                </div>
                 {this.listProducts()}
             </ >
         )
