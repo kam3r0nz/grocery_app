@@ -8,6 +8,13 @@ class ProductsContainer extends React.Component {
     render() {
         return (
             < >
+            <div className="search-box">
+                <form>
+                    <input type="text"/>
+                    <input type="submit" value="Search"/>
+                </form>
+            </div>
+
             <h1>Products</h1>
             <ProductsList products={this.props.products} cart={this.props.cart} addToCart={this.props.addToCart}/>
             </ >

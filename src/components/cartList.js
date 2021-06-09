@@ -6,7 +6,6 @@ class CartList extends React.Component {
 
     handleOnClick = (product) => {
         this.props.removeFromCart(product)
-
     }
 
     listProducts = () => {
