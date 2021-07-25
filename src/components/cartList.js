@@ -1,6 +1,7 @@
 import React from 'react'
 import Product from './product'
 import RemoveFromCartButton from './removeFromCartButton'
+import CheckoutButton from './checkoutButton'
 
 class CartList extends React.Component {
 
@@ -30,7 +31,7 @@ class CartList extends React.Component {
     render() {
         return (
             < >
-            <h3>Total: ${Math.round(100*this.props.cart.total)/100}</h3>
+            <h3>Total: ${Math.round(100*this.props.cart.total)/100} <CheckoutButton/></h3>
             {this.listCart()}
             </ >
         )
