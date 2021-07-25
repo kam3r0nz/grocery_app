@@ -1,6 +1,7 @@
 import React from 'react'
 import Product from './product'
 import RemoveFromCartButton from './removeFromCartButton'
+import Checkout from './checkout'
 import CheckoutButton from './checkoutButton'
 
 class CartList extends React.Component {
@@ -47,10 +48,17 @@ class CartList extends React.Component {
         }
     }
 
+    showCheckoutForm = () => {
+        if (this.state.showCheckout === true) {
+            return <Checkout/>
+        }
+    }
+
     render() {
         return (
             < >
             <h3>Total: ${Math.round(100*this.props.cart.total)/100} {this.showCheckoutButton()}</h3>
+            {this.showCheckoutForm()}
             {this.listCart()}
             </ >
         )
