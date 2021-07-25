@@ -41,10 +41,16 @@ class CartList extends React.Component {
         }
     }
 
+    showCheckoutButton = () => {
+        if (this.props.cart.total > 0) {
+            return <div onClick={this.handleOnCheckout}><CheckoutButton/></div>
+        }
+    }
+
     render() {
         return (
             < >
-            <h3>Total: ${Math.round(100*this.props.cart.total)/100} <div onClick={this.handleOnCheckout}><CheckoutButton/></div></h3>
+            <h3>Total: ${Math.round(100*this.props.cart.total)/100} {this.showCheckoutButton()}</h3>
             {this.listCart()}
             </ >
         )
