@@ -1,10 +1,15 @@
 import React from 'react'
 
 class Checkout extends React.Component {
+
+    handleOnSubmit = (e) => {
+        e.preventDefault()
+    }
+
     render() {
         return (
             < >
-                <form className="checkout-form">
+                <form className="checkout-form" onSubmit={this.handleOnSubmit}>
                     <label htmlFor="first-name">First Name: </label><br/>
                     <input type="text" id="first-name" name="first-name" required/><br/>
 
@@ -29,11 +34,12 @@ class Checkout extends React.Component {
                     <input type="tel" name="cardnumber" id="frmCCNum" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="16" required placeholder="XXXX XXXX XXXX XXXX" autocomplete="cc-number"/><br/>
 
                     <label for="frmCCCVC">CVC: </label><br/>
-                    <input type="tel" name="cvc" id="frmCCCVC" inputmode="numeric" pattern="[0-9\s]" maxlength="3" required autocomplete="cc-csc"/><br/>
+                    <input type="tel" name="cvc" id="frmCCCVC" inputmode="numeric" maxlength="3" required autocomplete="cc-csc"/><br/>
 
                     <label for="frmCCExp">Expiration date: </label><br/>
                     <input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp"/><br/>
-                    <input type="submit"/>
+
+                    <input type="submit" class="cart-btn" value="Complete Purchase"/>
                 </form>
             </ >
         )

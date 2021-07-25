@@ -82,4 +82,6 @@ h6 {
 
 .checkout-form {
   margin-left: 25px;
+  margin-right: 50px;
+  float: left;
 }
