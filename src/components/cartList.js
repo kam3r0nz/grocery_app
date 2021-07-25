@@ -18,9 +18,15 @@ class CartList extends React.Component {
     }
 
     handleOnCheckout = () => {
-        this.setState({
-            showCheckout: true
-        })
+        if (this.state.showCheckout === false) {
+            this.setState({
+                showCheckout: true
+            })
+        } else {
+            this.setState({
+                showCheckout: false
+            })
+        }
     }
 
     listProducts = () => {
