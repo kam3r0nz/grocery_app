@@ -18,6 +18,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <div id="header">Grocery App</div>
         <Router>
           <NavBar user={this.props.user} products={this.props.products} cart={this.props.cart}/>
           <Route exact path="/" component={User} />
